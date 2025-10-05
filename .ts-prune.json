@@ -1,0 +1,40 @@
+{
+    "ignoreUsedInModule": true,
+    "rules": [
+        {
+            "files": ["middleware\\.ts"],
+            "exports": ["config", "middleware"]
+        },
+        {
+            "files": ["\\.config\\.(ts|mts|js)$"],
+            "exports": ["default"]
+        },
+        {
+            "files": ["app/robots.ts", "app/sitemap.ts", "app/layout.tsx", "page.tsx", "loading.tsx", "error.tsx"],
+            "exports": ["default", "generateMetadata"]
+        },
+        {
+            "files": ["route\\.ts"],
+            "exports": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "HEAD",
+                "OPTIONS",
+                "dynamic",
+                "revalidate",
+                "maxDuration"
+            ]
+        },
+        {
+            "files": ["db/migrations/.*\\.ts"],
+            "exports": ["up", "down"]
+        },
+        {
+            "files": ["\\.next/.*"],
+            "exports": [".*"]
+        }
+    ]
+}
